@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>DMHub</title>
+        <link rel="stylesheet" href="{% static "css/home.css" %}">
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+        </script>
+        <script src="{% static "js/index.js" %}"></script>
+    </head>
+    <body>
+        <div id="main">
+            <img src="{% static "figure/home.png" %}" alt="background">
+            <h1>DMHub</h1>
+                <div id = 'signin'>
+                    <form class="feature_column" id="login" action = "{% url "login" %}" method={{ method }}>
+                    {% csrf_token %}
+                    <input type="hidden" value="index.html" name="redirect_path" />
+                    <input type="hidden" value="{{ status }}" name="status" />
+                    <input type="submit" value="{{ status }}" /></form>
+                </div>
+
+            <div id = 'container'>
+                <div id = "demo"></div>
+                <div id="features">
+                    <form class="feature_column" id="explore" action = "{% url "data" %}">
+                        <input type="submit" value="See How DMhub Works" />
+                    </form>
+
+                    <div class="feature_column" id="uploaddata">
+                        <form action="{% url "index" %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input type="submit" value="Upload My Own Dataset"/>
+                            <div id = "custom-file">
+                                <label for = "id_docfile" id="custom-file-upload">Browse...</label>
+                                {{ form.docfile }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+    </body>
+</html>

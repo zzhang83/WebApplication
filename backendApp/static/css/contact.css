@@ -1,0 +1,180 @@
+@import url('font.css');
+/** {*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+h2{
+  margin-bottom: 2%;
+  font-weight: normal;
+  font-family:"Rokkitt";
+  font-size:1.7em;
+}
+
+#coffee{
+  margin-top: 2%;
+  font-family:"Rokkitt";
+  font-size:1.5em;
+}
+
+label{
+  font-family:"Rokkitt";
+  font-size:1.5em;
+}
+#question{
+  font-size: 1em;
+}
+
+#subject{
+  height:10em;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 3%;
+    border: 1px solid #ccc;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    resize: vertical;
+    font-family:"Rokkitt";
+}
+
+#submit {
+    background-color: #0EBFE9;
+    margin-top: 2%;
+    color: white;
+    padding: 2% 4%;
+    border: none;
+    cursor: pointer;
+    font-family:"Rokkitt";
+    font-size:1em; 
+}
+
+#submit:hover {
+    background-color: #0099CC;
+}
+
+/* Style the container/contact section */
+.container {
+  width:60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding:2%;
+}
+
+.overall{
+  background-color: #f2f2f2;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+}
+
+.column2 {
+    float: left;
+    width: 35%;
+    margin-left: 15%;
+    margin-right: 0%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    margin-left: 0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /*#topline {*/
+        /*font-size:1em;*/
+    /*}*/
+    /*#get_start {*/
+        /*padding: 1% 2%;*/
+        /*font-size:0.2em;*/
+    /*}*/
+}
+
+
+/*88888888888 TOP Container 8888888888888888888888*/
+.top_container{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#img{
+  width:100%;
+  margin-left: 0%;
+  display:block;
+}
+
+
+#topline{
+  color:white;
+  margin-bottom: 7%;
+  font-size: 4em;
+  font-weight: normal;
+  font-family:"Rokkitt";
+}
+
+#get_start{
+  color:black;
+  background-color: #FFFFFF;
+  padding: 3% 6%;
+  border: none;
+  cursor: pointer;
+  font-family:"Rokkitt";
+  font-size:1em;
+}
+
+#get_start:hover {
+    background-color: #cccccc;
+}
+
+/*************right column text*******************/
+#connect{
+  font-weight:normal;
+  font-family:"Rokkitt";
+  font-size:1.5em;
+
+}
+ 
+#info > p{
+  margin-top: 2%;
+  margin-bottom: 10%;
+  font-size: 1.5em;
+  font-family:"Rokkitt";
+
+}
+.address{
+  font-size:1.5em;
+  margin-bottom: 0%;
+  font-family:"Rokkitt";
+  font-weight: bold;
+}
+
+

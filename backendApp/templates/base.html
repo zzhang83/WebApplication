@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="header-container">
+              <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link">
+                                <i class="fas fa-home" style="margin-right: 20px"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/data/" class="nav-link">
+                                Data
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/lab/" class="nav-link">
+                                Team
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/contact/" class="nav-link">
+                                Conatct
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        {% block login %} {% endblock %}
+                    </ul>
+
+
+            </nav>
+        </div>
+
+        {% block main %}{% endblock %}
+    </body>
+</html>

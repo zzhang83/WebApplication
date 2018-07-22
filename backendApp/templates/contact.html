@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact us</title>
+    <link rel = "stylesheet" href="{% static "css/contact.css" %}">
+    <link rel = "stylesheet" href="{% static "css/navigation.css" %}">
+{% endblock %}
+{% block login %}
+    <form class="nav-item" id="login" action = "{% url "login" %}" method={{ method }}>
+        {% csrf_token %}
+        <input type="hidden" value="contact.html" name="redirect_path" />
+        <input type="hidden" value="{{ status }}" name="status" />
+        <input type="submit" value="{{ status }}" />
+    </form>
+{% endblock %}
+
+{% block main %}
+  <div class="top_container">
+      <img id = "img" src="{% static "figure/back.jpg" %}" alt="machine learning">
+      <div class="centered">
+        <h4 id="topline">Predict in an instant</h4>
+        <form id = "top" action="{% url "index" %}">
+          <input id="get_start" type="submit" value="GET STARTED">
+        </form>
+      </div>
+  </div>
+
+  <div class = "overall">
+  <div class="container">
+
+    <div class="row">
+      <div class="column">
+        
+        <div style="text-align:left">
+          <h2>Get in touch</h2>
+          <p id ='coffee'>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+
+        <form action="{% url "submit" %}" method="post">
+          <label for="q_type">Question type</label>
+            {% csrf_token %}
+          <select id="question" name="q">
+            <option value="model">Questions about models?</option>
+            <option value="dataset">Questions about datasets?</option>
+            <option value="general">General questions</option>
+          </select>
+          <!-- <label for="fname">First Name</label> -->
+          <input type="text" id="name" name="firstname" placeholder="Name *" required>
+          <!-- <label for="lname">Last Name</label> -->
+          <input type="text" id="email" name="email" placeholder="Email *" required>
+          <!-- <label for="subject">Subject</label> -->
+          <textarea id="subject" name="subject" placeholder="Message *" maxlength="6000" required></textarea>
+          <input id = "submit" type="submit" value="Submit">
+        </form>
+      </div>
+
+      <div class="column2">
+        <div id="info">
+          <h3 id='connect'>Connect with us:</h3>
+          <p>For support or any questions: <br> Email us at ez@cs.brown.edu</p>
+          <h3 class='address'> MIT Computer Science & <br> Artificial Intelligence Lab </h3>
+          <p>32 Vassar St, <br> Cambridge, MA 02139</p>
+          <h3 class='address'> Brown Data Management <br> Research Group </h3>
+          <p>115 Waterman St, <br> Providence, RI 02906</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+{% endblock %}

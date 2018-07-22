@@ -1,0 +1,115 @@
+@import url('font.css');
+
+@media screen and (max-width: 600px) {
+    img{
+        margin-left: -512px;
+    }
+}
+
+img {
+    min-height: 100%;
+    min-width: 1024px;
+    width:100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+h1{
+    font-family:"Rokkitt";
+    color: white;
+    font-size: 70px;
+    opacity: 0.9;
+    letter-spacing: 4px;
+    margin-left: 2%;
+}
+
+#signin{
+    float: right;
+    opacity: 0.9;
+    margin-right:5%;
+    position: relative;
+    bottom:120px;
+}
+
+
+#container{
+    text-align: center;
+    position: relative;
+}
+
+#demo{
+    font-family: "Cairo";
+    color: white;
+    opacity: 0.8;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 33px;
+    position: relative;
+    margin-top:13%;
+}
+
+#features{
+    margin-top:2% ;
+}
+
+#explore,#uploaddata{
+    display: inline-block;
+    vertical-align:top;
+    width: 22%;
+}
+
+.feature_column a{
+    text-decoration: none;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+input[type=submit] {
+    color: white;
+    font-size: 18px;
+    font-family: Cairo;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+
+    border-radius:5px;
+    border-color: transparent;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, .2);
+    height:40px;
+    cursor: pointer;
+    padding: 0 18px;
+}
+
+#custom-file-upload{
+    margin-top: 10%;
+    display: inline-block;
+    vertical-align:top;
+}
+
+#custom-file-upload {
+    border-radius: 5px;
+    background-color:white;
+    opacity: 0.8;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color:black;
+    font-family: Cairo;
+    font-weight: bold;
+}
+
+#filechoosen{
+    font-family: Cairo;
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left:5%;
+}
+

@@ -1,0 +1,35 @@
+#header-container {
+    grid-area: header;
+}
+
+.nav-item {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+hr {
+    height: 5px;
+    background-color: #d27b0e;
+    position: relative;
+    bottom:21px;
+}
+
+.nav-item {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: Cairo;
+    font-weight: bolder;
+}
+.nav-item input[type=submit] {
+    color: rgba(0, 0, 0, .6);
+    font-size: 18px;
+    font-family: Cairo;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+
+    border-color: transparent;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+@import url('font.css');
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+ /*********** Column adjustment **********/
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  margin-right: 1.5%;
+  padding: 0 8px;
+}
+
+.column2 {
+  float: left;
+  width: 46%;
+  margin-bottom: 16px;
+  margin-right:1.5%;
+  padding: 0 8px;
+}
+
+.column3 {
+  float: left;
+  width: 22.2%;
+  margin-bottom: 16px;
+  margin-right:1.4%;
+  padding: 0 8px;
+}
+
+/*********** overall **********/
+#overall{
+  background-color: #f2f2f2;
+  margin-top: 0%;
+  padding: 0.5%;
+}
+
+#whole{
+  width: 80%;
+  align:center;
+  vertical-align: center;
+  margin-left: 12.5%;
+}
+
+
+@media screen and (max-width: 700px) {
+  .column, .column2 {
+    width: 100%;
+    display: block;
+  }
+}
+
+/*********** card **********/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*********** inner text & button **********/
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  background-color: #000;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 3.5%;
+  text-align: center;
+  color: white;
+  font-size:1em;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+.img{
+  background-color: lightgray;
+}
+.phd{width:80%;
+    display: block;
+    margin-left: auto;
+    margin-top:10%;
+    margin-bottom:auto;
+    margin-right: auto;}
+
+#meet{
+  text-align: center;
+
+}
+
+#des{
+  margin-left:12.5%;
+  margin-right: 12.5%;
+  font-size: 1.2em;
+  text-align:justify;
+}
+
+h1, p, h2,.button{
+  font-family: "Rokkitt";
+}
+
+

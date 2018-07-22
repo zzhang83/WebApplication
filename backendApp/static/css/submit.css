@@ -1,0 +1,77 @@
+@media screen and (max-width: 600px) {  Specific to this particular image
+}
+
+img {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed;
+}
+/*!***Container***!*/
+/*.container{*/
+    /*position: relative;*/
+    /*text-align: center;*/
+    /*color: white;*/
+/*}*/
+
+/* Centered text */
+.centered {
+    position: absolute;
+    width:36%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/***Text***/
+.info1,.info2, #time_count, #inline, #word{
+    font-family:"cairo";
+    color: white;
+}
+
+.info1{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 5%;
+    opacity:0.8;
+
+}
+
+.info2 {
+    font-size: 2em;
+    text-align: center;
+    vertical-align: center;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    opacity:0.8;
+}
+
+#time_count{
+    font-size:1.5em;
+
+}
+
+#cover, #word{
+    font-size: 1.2em;
+    text-align: center;
+    opacity:0.8;
+}
+
+/* unvisited link */
+a:link {
+    color: darkred;
+    text-decoration: none;
+}
+
+
+/* mouse over link & selected link */
+a:hover, a:active {
+    color: red;
+    text-decoration: underline;
+}
+
+
+

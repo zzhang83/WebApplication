@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
+{% load static %}
+{#{% load compress %}#}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/main.css/" %}">
+{% endblock %}
+
+{% block login %}
+    <form class="nav-item" id="login" action = "{% url "login" %}" method={{ method }}>
+        {% csrf_token %}
+        <input type="hidden" value="data.html" name="redirect_path" />
+        <input type="hidden" value="{{ status }}" name="status" />
+        <input type="submit" value="{{ status }}" />
+    </form>
+{% endblock %}
+
+{% block main %}
+    <div id="App1"></div>
+    {% render_bundle 'vendors' %}
+    {% render_bundle 'App1' %}
+{% endblock %}

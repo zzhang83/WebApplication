@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/about.css/" %}">
+    <link rel="stylesheet" href="{% static "css/navigation.css" %}">
+    <title>About</title>
+{% endblock %}
+
+{% block login %}
+    <form class="nav-item" id="login" action = "{% url "login" %}" method={{ method }}>
+        {% csrf_token %}
+        <input type="hidden" value="lab.html" name="redirect_path" />
+        <input type="hidden" value="{{ status }}" name="status" />
+        <input type="submit" value="{{ status }}" />
+    </form>
+{% endblock %}
+
+{% block main %}
+<div id="overall">
+<h1 id="meet"> Meet The Team </h1>
+<p id ="des"> Our team includes two leading research group in the data science field, one is MIT CSAIL group, and the other is Brown university data management group. We have professor Tim Kraska, PhD student Emanuel Zgraggen and Zeyuan Shang join the team. Together, the team explores and pioneers the breakthrough of the most recent technology in data science.  </p>
+<br>
+
+<div id = "whole">
+
+
+    <div class="row">
+
+      <div class="column2">
+        <div class="card">
+          <div class = 'img'> <img src="{% static "figure/mit2.png" %}" alt="CSAIL" style="width:100%"> </div>
+          <div class="container">
+            <h2>MIT CSAIL Group</h2>
+            <!-- <p class="title"></p> -->
+            <p>CSAIL have played key roles in developing innovations like the World Wide Web, RSA encryption, Ethernet, parallel computing and much of the technology underlying the ARPANet and the Internet.</p>
+            <p>webmaster@csail.mit.edu</p>
+            <form action="https://www.csail.mit.edu/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+            <!-- <p><button class="button">Learn more</button></p> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="card">
+          <div class = 'img'> <img src="{% static "figure/brown2.jpg" %}" alt="Brown Data Management" style="width:100%"> </div>
+          <div class="container">
+            <h2>Brown Data Management Group</h2>
+            <!-- <p class="title">Art Director</p> -->
+            <p>This research group is focused on a wide-range of problem domains for database management systems, including analytical (OLAP), transactional (OLTP), machine learning and scientific workloads.</p>
+            <p>db-www@cs.brown.edu</p>
+            <form action="http://database.cs.brown.edu/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+            <!-- <p><button class="button">Learn more</button></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+
+
+
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img class="phd" src="{% static "figure/me_brown.jpg" %}" alt="Tim">
+          <div class="container">
+            <h2>Tim Kraska</h2>
+            <p class="title">Professor</p>
+            <p>I am an Associate Professor of Electrical Engineering and Computer Science in MIT's CSAIL. Currently, my research focuses on building systems for machine learning, and using machine learning for systems.</p>
+            <p>kraska@mit.edu</p>
+            <form action="http://people.csail.mit.edu/kraska/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+            <!-- <p><button class="button">Learn more</button></p> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+            <img class="phd" src="{% static "figure/emanuel_zgraggen.png" %}" alt="Emanuel">
+    {#      <img src="../static/figure/emanuel_zgraggen.png" alt="Emanuel" style="width:100%">#}
+          <div class="container">
+            <h2>Emanuel Zgraggen</h2>
+            <p class="title">PhD student</p>
+            <p>I'm a PhD candidate at Brown University's Computer Science department. My research interests include HCI, InfoVis and Data Science. I'm currently working on pen & touch-based tools for visual data exploration and analysis.</p>
+            <p>ez@cs.brown.edu</p>
+            <form action="http://emanuelzgraggen.com/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+            <!-- <p><button class="button">Contact</button></p> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img class="phd" src="{% static "figure/zeyuan.jpg" %}" alt="zeyuan" >
+          <div class="container">
+            <h2>Zeyuan Shang</h2>
+            <p class="title">PhD student</p>
+            <p>I am currencly a first year Ph.D. student in Computer Science at Brown University. My research interests include systems for machine learning, machine learning for systems, and large-scale interactive data analytics.</p>
+            <p>zeyuanxy@gmail.com</p>
+            <form action="http://www.shangzeyuan.com/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+            <!-- <p><button class="button">Contact</button></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="column3">
+        <div class="card">
+          <img src="{% static "figure/zexuan.jpeg" %}" alt="Zexuan Huang" style="width:100%">
+          <div class="container">
+            <h2>Zexuan Huang</h2>
+            <p class="title">Master Student</p>
+            <p>Web application design</p>
+            <p>zexuan_huang@brown.edu</p>
+            <form action="https://www.linkedin.com/in/zexuan-huang/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="column3">
+        <div class="card">
+            <img src="{% static "figure/jin3.jpeg" %}" alt="Jin Yan" style="width:100%">
+          <div class="container">
+            <h2>Jin Yan</h2>
+            <p class="title">Master student</p>
+            <p>Web application design</p>
+            <p>jin_yan@brown.edu</p>
+            <form action="https://www.linkedin.com/in/yan-jin/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="column3">
+        <div class="card">
+            <img src="{% static "figure/tong.jpeg" %}" alt="Tong Zhang" style="width:100%">
+          <div class="container">
+            <h2>Tong Zhang</h2>
+            <p class="title">Master student</p>
+            <p>Web application design</p>
+            <p>tong_zhang1@brown.edu</p>
+            <form action="https://www.linkedin.com/in/tong-zhang/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="column3">
+        <div class="card">
+          <img src="{% static "figure/zhiwei.jpeg" %}" alt="Zhiwei Zhang" style="width:100%">
+          <div class="container">
+            <h2>Zhiwei Zhang</h2>
+            <p class="title">Master student</p>
+            <p>Web application design</p>
+            <p>zhiwei_zhang@brown.edu</p>
+            <form action="https://www.linkedin.com/in/zhiwei-zhang-292b5283/">
+              <input type="submit" value="Learn more" class="button"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>
+
+{% endblock %}
